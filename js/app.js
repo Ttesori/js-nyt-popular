@@ -19,7 +19,7 @@ const init = async () => {
 
 const getMostViewed = async () => {
   let resp = await fetch('/.netlify/functions/getMostViewed');
-  let data = await resp.body;
+  let data = await resp;
   console.log(await data.json());
 
   //return data.results.slice(0, 10).map(article => article.title);
