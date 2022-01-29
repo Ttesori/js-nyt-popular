@@ -1,0 +1,25 @@
+{
+  "name": "js-nyt-popular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "netlify": "./node_modules/.bin/netlify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ttesori/js-nyt-popular.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ttesori/js-nyt-popular/issues"
+  },
+  "homepage": "https://github.com/Ttesori/js-nyt-popular#readme",
+  "devDependencies": {
+    "netlify-cli": "^8.15.0"
+  },
+  "dependencies": {
+    "axios": "^0.25.0"
+  }
+}
