@@ -7,7 +7,7 @@ const els = {
 const init = async () => {
   try {
     //addList(await getMostViewed(), els.viewedEl);
-    console.log(getMostViewed());
+    console.log(await getMostViewed());
 
     // addList(await getMostEmailed(), els.emailedEl);
     // addList(await getFacebook(), els.facebookEl);
@@ -20,7 +20,7 @@ const init = async () => {
 const getMostViewed = async () => {
   let resp = await fetch('/.netlify/functions/getMostViewed');
   let data = await resp.body;
-  console.log(data);
+  console.log(await data.json());
 
   //return data.results.slice(0, 10).map(article => article.title);
 }
