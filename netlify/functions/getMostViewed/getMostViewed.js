@@ -8,7 +8,8 @@ const fetch = require('node-fetch')
 exports.handler = async (event, context) => {
   let response
   try {
-    response = await fetch(url)
+    response = await fetch(url);
+    console.log(response);
     // handle response
   } catch (err) {
     return {
