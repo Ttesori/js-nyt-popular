@@ -6,9 +6,11 @@ const els = {
 
 const init = async () => {
   try {
-    addList(await getMostViewed(), els.viewedEl);
-    addList(await getMostEmailed(), els.emailedEl);
-    addList(await getFacebook(), els.facebookEl);
+    //addList(await getMostViewed(), els.viewedEl);
+    console.log(getMostViewed());
+
+    // addList(await getMostEmailed(), els.emailedEl);
+    // addList(await getFacebook(), els.facebookEl);
   } catch (err) {
     console.log('error', err);
   }
@@ -16,10 +18,11 @@ const init = async () => {
 }
 
 const getMostViewed = async () => {
-  let resp = await fetch('https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=');
-  let data = await resp.json();
+  let resp = await fetch('/.netlify/functions/getMostViewed');
+  let data = await resp.body;
+  console.log(data);
 
-  return data.results.slice(0, 10).map(article => article.title);
+  //return data.results.slice(0, 10).map(article => article.title);
 }
 
 const getMostEmailed = async () => {
